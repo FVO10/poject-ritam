@@ -1,10 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function ImageWithFallback({ src, alt, fill, className, sizes, priority }) {
   const [hasError, setHasError] = useState(false)
+  const [imgSrc, setImgSrc] = useState(src)
+
+  useEffect(() => {
+    setImgSrc(src)
+    setHasError(false)
+    
+    // Vérifier si l'image existe
+    const img = new window.Image()
+    img.onload = () => setHasError(false)
+    img.onerror = () => setHasError(true)
+    img.src = src
+  }, [src])
 
   if (hasError) {
     return (
@@ -16,13 +28,12 @@ export default function ImageWithFallback({ src, alt, fill, className, sizes, pr
 
   return (
     <Image
-      src={src}
+      src={imgSrc}
       alt={alt}
       fill={fill}
       className={className}
       sizes={sizes}
       priority={priority}
-      onError={() => setHasError(true)}
     />
   )
 }

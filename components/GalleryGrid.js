@@ -1,10 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 function GalleryImage({ src, alt, index }) {
   const [hasError, setHasError] = useState(false)
+  const [imgSrc, setImgSrc] = useState(src)
+
+  useEffect(() => {
+    setImgSrc(src)
+    setHasError(false)
+    
+    // Vérifier si l'image existe
+    const img = new window.Image()
+    img.onload = () => setHasError(false)
+    img.onerror = () => setHasError(true)
+    img.src = src
+  }, [src])
 
   if (hasError) {
     return (
@@ -16,12 +28,11 @@ function GalleryImage({ src, alt, index }) {
 
   return (
     <Image
-      src={src}
+      src={imgSrc}
       alt={alt}
       fill
       className="object-cover image-hover"
       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      onError={() => setHasError(true)}
     />
   )
 }
