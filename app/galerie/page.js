@@ -5,6 +5,8 @@ export const metadata = {
   description: 'Découvrez notre studio Ritam Yoga Wellness à Casablanca en images. Espaces zen, cours de yoga, ateliers et retraites.',
 }
 
+export const dynamic = 'force-dynamic'
+
 export default function Gallery() {
   return (
     <>

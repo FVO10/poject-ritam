@@ -5,6 +5,8 @@ export const metadata = {
   description: 'Découvrez Ritam Yoga Wellness, notre histoire, notre philosophie et notre approche du yoga à Casablanca.',
 }
 
+export const dynamic = 'force-dynamic'
+
 export default function About() {
   return (
     <div className="py-16">

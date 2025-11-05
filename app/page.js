@@ -7,6 +7,8 @@ export const metadata = {
   description: 'Bienvenue à Ritam Yoga Wellness, votre studio de yoga zen et minimaliste à Casablanca. Cours collectifs, cours privés, ateliers et retraites.',
 }
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
   return (
     <>
