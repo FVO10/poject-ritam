@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+    @apply bg-white text-japanese-violet;
+    @apply font-normal;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+    @apply text-japanese-violet;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-japanese-violet text-white px-6 py-3 rounded-lg;
+    @apply transition-all duration-300 ease-smooth;
+    @apply hover:scale-105 hover:shadow-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-japanese-violet focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-ritam-yellow text-japanese-violet px-6 py-3 rounded-lg font-medium;
+    @apply transition-all duration-300 ease-smooth;
+    @apply hover:scale-105 hover:shadow-lg;
+    @apply focus:outline-none focus:ring-2 focus:ring-ritam-yellow focus:ring-offset-2;
+  }
+  
+  .image-hover {
+    @apply transition-transform duration-300 ease-smooth;
+    @apply hover:scale-105;
+  }
+}
+
