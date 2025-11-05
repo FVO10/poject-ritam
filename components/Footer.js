@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
+import Logo from './Logo'
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Rit<span className="text-ritam-yellow">a</span>m Yoga Wellness
-            </h3>
+            <div className="mb-4">
+              <Logo size="lg" textColor="#ffffff" />
+            </div>
             <p className="text-gray-300 text-sm">
               Votre espace de bien-être zen et minimaliste au cœur de Casablanca.
             </p>
