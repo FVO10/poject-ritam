@@ -1,6 +1,6 @@
 import HeroSlider from '@/components/HeroSlider'
 import ServicesGrid from '@/components/ServicesGrid'
-import ImageFallback from '@/components/ImageFallback'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'Accueil',
@@ -35,10 +35,11 @@ export default function Home() {
               </a>
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-200">
-              <ImageFallback
+              <Image
                 src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
                 alt="Studio Ritam Yoga Wellness - espace zen et minimaliste"
-                className="w-full h-full object-cover image-hover"
+                fill
+                className="object-cover image-hover"
               />
             </div>
           </div>

@@ -1,4 +1,4 @@
-import ImageWithFallback from '@/components/ImageWithFallback'
+import Image from 'next/image'
 
 export const metadata = {
   title: 'À propos',
@@ -22,7 +22,7 @@ export default function About() {
 
         <div className="prose prose-lg max-w-none mb-12">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg mb-8 bg-gray-200">
-            <ImageWithFallback
+            <Image
               src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80"
               alt="Studio Ritam Yoga Wellness - espace de pratique"
               fill
