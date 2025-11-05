@@ -1,5 +1,6 @@
 import HeroSlider from '@/components/HeroSlider'
 import ServicesGrid from '@/components/ServicesGrid'
+import ImageFallback from '@/components/ImageFallback'
 
 export const metadata = {
   title: 'Accueil',
@@ -32,14 +33,10 @@ export default function Home() {
               </a>
             </div>
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-200">
-              <img
+              <ImageFallback
                 src="/images/about-preview.jpg"
                 alt="Studio Ritam Yoga Wellness - espace zen et minimaliste"
                 className="w-full h-full object-cover image-hover"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  e.target.parentElement.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-400"><p>Image à ajouter</p></div>'
-                }}
               />
             </div>
           </div>

@@ -1,4 +1,30 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
+
+function GalleryImage({ src, alt, index }) {
+  const [hasError, setHasError] = useState(false)
+
+  if (hasError) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-gray-400 bg-gray-200">
+        <p className="text-sm">Image à ajouter</p>
+      </div>
+    )
+  }
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      fill
+      className="object-cover image-hover"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      onError={() => setHasError(true)}
+    />
+  )
+}
 
 export default function GalleryGrid() {
   const images = [
@@ -31,23 +57,7 @@ export default function GalleryGrid() {
               key={index}
               className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-gray-200"
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover image-hover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                  const parent = e.target.parentElement
-                  if (!parent.querySelector('.placeholder')) {
-                    const placeholder = document.createElement('div')
-                    placeholder.className = 'placeholder w-full h-full flex items-center justify-center text-gray-400 bg-gray-200'
-                    placeholder.innerHTML = '<p class="text-sm">Image à ajouter</p>'
-                    parent.appendChild(placeholder)
-                  }
-                }}
-              />
+              <GalleryImage src={image.src} alt={image.alt} index={index} />
             </div>
           ))}
         </div>

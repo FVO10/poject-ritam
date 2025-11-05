@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import ImageWithFallback from '@/components/ImageWithFallback'
 
 export const metadata = {
   title: 'À propos',
@@ -20,21 +20,11 @@ export default function About() {
 
         <div className="prose prose-lg max-w-none mb-12">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg mb-8 bg-gray-200">
-            <Image
+            <ImageWithFallback
               src="/images/about-main.jpg"
               alt="Studio Ritam Yoga Wellness - espace de pratique"
               fill
               className="object-cover"
-              onError={(e) => {
-                e.target.style.display = 'none'
-                const parent = e.target.parentElement
-                if (!parent.querySelector('.placeholder')) {
-                  const placeholder = document.createElement('div')
-                  placeholder.className = 'placeholder w-full h-full flex items-center justify-center text-gray-400 bg-gray-200'
-                  placeholder.innerHTML = '<p>Image à ajouter</p>'
-                  parent.appendChild(placeholder)
-                }
-              }}
             />
           </div>
 
