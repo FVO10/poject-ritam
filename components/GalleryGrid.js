@@ -14,15 +14,15 @@ function GalleryImage({ src, alt }) {
 
 export default function GalleryGrid() {
   const images = [
-    { src: '/images/gallery-1.jpg', alt: 'Salle de yoga zen avec vue sur Casablanca' },
-    { src: '/images/gallery-2.jpg', alt: 'Cours de yoga collectif en cours' },
-    { src: '/images/gallery-3.jpg', alt: 'Posture de méditation dans le studio' },
-    { src: '/images/gallery-4.jpg', alt: 'Espace de détente après la pratique' },
-    { src: '/images/gallery-5.jpg', alt: 'Atelier de yoga en petit groupe' },
-    { src: '/images/gallery-6.jpg', alt: 'Retraite de yoga dans un cadre apaisant' },
-    { src: '/images/gallery-7.jpg', alt: 'Cours privé de yoga personnalisé' },
-    { src: '/images/gallery-8.jpg', alt: 'Studio Ritam Yoga Wellness - espace principal' },
-    { src: '/images/gallery-9.jpg', alt: 'Pratique de yoga en extérieur' },
+    { src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', alt: 'Salle de yoga zen avec vue sur Casablanca' },
+    { src: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80', alt: 'Cours de yoga collectif en cours' },
+    { src: 'https://images.unsplash.com/photo-1510894347713-2eb2020a9d2a?w=800&q=80', alt: 'Posture de méditation dans le studio' },
+    { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80', alt: 'Espace de détente après la pratique' },
+    { src: 'https://images.unsplash.com/photo-1545389336-cf9066942eb1?w=800&q=80', alt: 'Atelier de yoga en petit groupe' },
+    { src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80', alt: 'Retraite de yoga dans un cadre apaisant' },
+    { src: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', alt: 'Cours privé de yoga personnalisé' },
+    { src: 'https://images.unsplash.com/photo-1508186225823-0963cf9ab0de?w=800&q=80', alt: 'Studio Ritam Yoga Wellness - espace principal' },
+    { src: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80', alt: 'Pratique de yoga en extérieur' },
   ]
 
   return (

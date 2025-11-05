@@ -9,17 +9,17 @@ export default function HeroSlider() {
   
   const slides = [
     {
-      image: '/images/hero-1.jpg',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80',
       title: 'Bienvenue à Ritam Yoga Wellness',
       subtitle: 'Votre espace de bien-être zen au cœur de Casablanca',
     },
     {
-      image: '/images/hero-2.jpg',
+      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80',
       title: 'Cours de yoga pour tous les niveaux',
       subtitle: 'Du débutant au confirmé, découvrez votre pratique',
     },
     {
-      image: '/images/hero-3.jpg',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80',
       title: 'Retraites et ateliers',
       subtitle: 'Plongez dans une expérience de transformation profonde',
     },
