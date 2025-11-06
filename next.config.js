@@ -2,9 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
     unoptimized: false,
   },
+  // Optimisations pour Vercel
+  swcMinify: true,
+  compress: true,
 }
 
 module.exports = nextConfig

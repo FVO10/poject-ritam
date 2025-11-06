@@ -46,14 +46,12 @@ export default function Logo({ className = '', size = 'md', textColor = '#5B3256
       </div>
       
       {/* Yoga & Wellness text positioned relative to yellow line */}
-      <div className="relative flex flex-col items-start justify-center" style={{ marginLeft: size === 'sm' ? '0.5rem' : size === 'md' ? '0.75rem' : '1rem', height: '1.5em' }}>
+      <div className="relative flex flex-col items-start ml-2" style={{ marginLeft: size === 'sm' ? '0.5rem' : size === 'md' ? '0.75rem' : '1rem' }}>
         {/* Yoga text above yellow line */}
         <span 
-          className={`${textSize} font-semibold leading-none absolute`} 
+          className={`${textSize} font-semibold leading-tight block`} 
           style={{ 
             color: textColor,
-            top: '0',
-            transform: 'translateY(-100%)',
             marginBottom: '0.125rem'
           }}
         >
@@ -61,11 +59,9 @@ export default function Logo({ className = '', size = 'md', textColor = '#5B3256
         </span>
         {/* & Wellness text below yellow line */}
         <span 
-          className={`${textSize} font-semibold leading-none absolute`} 
+          className={`${textSize} font-semibold leading-tight block`} 
           style={{ 
             color: textColor,
-            bottom: '0',
-            transform: 'translateY(100%)',
             marginTop: '0.125rem'
           }}
         >
